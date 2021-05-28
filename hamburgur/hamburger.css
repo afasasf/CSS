@@ -1,0 +1,262 @@
+@keyframes hamburgur1{
+    0%{ 
+        transform: translatey(0%) rotateZ(0deg);
+    }
+
+    50%{
+        top: 50%;
+        opacity: 0;
+    }
+
+    100%{
+        transform: translatey(0) rotateZ(-45deg);
+        top: 35%;
+        right: 28%;
+        width: 30px;
+    }
+}
+
+@keyframes hamburgur2 {
+    0%{ 
+        transform: translatey(0%) rotateZ(0deg);
+    }
+
+    50%{
+        top: 50%;
+        opacity: 0;
+    }
+
+    100%{
+        transform: rotateZ(45deg);
+        top: 35%;
+        left: 49%;
+        width: 30px;
+    }
+}
+
+@keyframes hamburgur3 {
+    0%{ 
+        transform: translatey(0%) rotateZ(0deg);
+    }
+    50%{
+        transform: translatey(0%) rotateZ(180deg);
+        top: 50%;
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes op{
+    100% {opacity: 0;}
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button_1{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_2{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span{
+    position: absolute;
+    display: block;
+    background-color: black;
+    height: 2px;
+    width: 40px;
+    transition: .5s ease;
+}
+
+span:first-child{
+    top: 0;
+}
+
+span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+span:last-child{
+    bottom: 0;
+}
+
+input{
+    display: none;
+}
+
+label{
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 40px;
+    padding-left: 10px;
+}
+
+#button:checked + label span:first-child{
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+#button:checked + label span:nth-child(2){
+    opacity: 0;
+}
+
+#button:checked + label span:last-child{
+    bottom: 50%;
+    transform: rotate(-45deg);
+}
+
+#button2:checked + label span:first-child{
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+
+#button2:checked + label span:last-child{
+    bottom: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+
+#button3:checked + label span:first-child{
+    transform: rotateZ(25deg);
+    width: 30px;
+}
+
+#button3:checked + label span:nth-child(2){
+    transform: rotateZ(25deg);
+    width: 35px;
+}
+
+#button3:checked + label span:last-child{
+    transform: rotateZ(25deg);
+    bottom: -10%;
+}
+
+
+#button4:checked + label span:first-child{
+    transform: translatey(-50%);
+    transform: rotateZ(225deg);
+    top: 50%;
+}
+
+#button4:checked + label span:nth-child(2){
+    opacity: 0;
+}
+
+#button4:checked + label span:last-child{
+    transform: translatey(50%);
+    transform: rotateZ(-225deg);
+    bottom: 40%;
+}
+
+
+#button5:checked + label span:first-child{
+    transform: rotateZ(180deg);
+    top: 50%;
+}
+
+#button5:checked + label span:nth-child(2){
+    opacity: 0;
+}
+
+#button5:checked + label span:last-child{
+    transform: rotateZ(-270deg);
+    bottom: 40%;
+}
+
+
+#button6:checked + label span:first-child{
+    animation: 1s hamburgur1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+#button6:checked + label span:nth-child(2){
+    animation: 1s hamburgur2;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+#button6:checked + label span:last-child{
+    animation: 1s hamburgur3;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+
+
+#button7:checked + label span:first-child{
+    transform: translateX(10%);
+    width: 10px;
+}
+
+#button7:checked + label span:nth-child(2){
+    transform: translateX(10%);
+    width: 10px;
+}
+
+#button7:checked + label span:nth-child(3){
+    transform: translateX(150%);
+    width: 10px;
+    opacity: 1;
+}
+
+#button7:checked + label span:nth-child(4){
+    transform: translateX(300%);
+    width: 10px;
+    opacity: 1;
+}
+
+#button7:checked + label span:nth-child(5){
+    transform: translateY(500%) translateX(150%);
+    width: 10px;
+    opacity: 1;
+}
+
+#button7:checked + label span:nth-child(6){
+    transform: translateY(500%) translateX(300%);
+    width: 10px;
+    opacity: 1;
+}
+#button7:checked + label span:nth-child(7){
+    transform: translateY(900%) translateX(150%);
+    width: 10px;
+    opacity: 1;
+}
+#button7:checked + label span:nth-child(8){
+    transform: translateY(900%) translateX(300%);
+    width: 10px;
+    opacity: 1;
+}
+#button7:checked + label span:last-child{
+    transform: translateX(10%);
+    width: 10px;
+}
+
+.opacity{
+    opacity: 0;
+}
